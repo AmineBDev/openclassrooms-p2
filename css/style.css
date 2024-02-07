@@ -91,7 +91,6 @@ nav a:hover::before {
     transform: translateY(-15px);
 }
 
-
 /****** Hebergements And Populaires ***********/
 #hebergements-and-populaires {
     display: flex;
