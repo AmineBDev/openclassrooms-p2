@@ -36,6 +36,11 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    transition: 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
 }
 .card img {
     object-fit: cover;
@@ -56,7 +61,7 @@ header {
     justify-content: space-between;
 }
 header img {
-    height: 25px;
+    height: 20px;
     margin: 30px 0;
 }
 nav ul {
@@ -91,6 +96,107 @@ nav a:hover::before {
     transform: translateY(-15px);
 }
 
+/********* SECTION RECHERCHE **********/
+.search {
+    margin: 30px 0;
+}
+.search p {
+    margin: 10px 0 40px 0;
+}
+form {
+    display: flex;
+    height: 52px;
+}
+.icon-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F2F2F2;
+    padding: 0 20px;
+    border-radius: 15px 0 0 15px;
+}
+label .fa-solid {
+    color: black;
+    font-size: 1.2rem;
+}
+input {
+    outline: none;
+    border: 1px solid #F2F2F2;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+input::placeholder {
+    color: black;
+}
+#search-text, #search-icon {
+    background: #0065FC;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 20px;
+    border-radius: 0 15px 15px 0;
+}
+#search-icon i {
+    color: white;
+}
+#search-icon {
+    display: none;
+}
+.filter-search {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.filter-search h2 {
+    font-size: 1.2rem;
+}
+.filter-search button {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 50px;
+    background: none;
+    padding: 13px 20px;
+    transition: 0.3s;
+}
+.filter-search button:hover {
+    background: #DEEBFF;
+}
+.filter-search i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.icon-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon-info i {
+    font-size: 0.75rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 50%;
+    min-width: 25px;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15px);
+}
+
+@media (max-width: 445px) {
+    #search-text {
+        display: none;
+    }
+    #search-icon {
+        display: inline-block;     
+    }
+}
+
+
 /****** Hebergements And Populaires ***********/
 #hebergements-and-populaires {
     display: flex;
@@ -108,7 +214,35 @@ nav a:hover::before {
 .hebergements {
     width: 65%;
 }
-
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 33px;
+}
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+}
+.hebergements-cards img {
+    width: 100%;
+    height: 110px;
+    border-radius: 15px 15px 0 0;
+}
+.hebergements .card-txt {
+    margin-left: 5px;
+}
+.hebergements .card-title {
+    margin: 10px 0 5px;
+}
+.hebergements .card-rating {
+    margin: 5px 0 5px 5px;
+}
+.hebergements h4 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -146,17 +280,55 @@ nav a:hover::before {
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
-}
-
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/******* Activités *******/
+#activities {
+    width: 95%;
+    margin: 60px auto;
+}
+.activities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 33px;
+}
+.activities-cards img {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px 15px 0 0;
+}
+.activities-cards .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+#activities .card-title {
+    margin: 20px;
+}
 
-
-
-
+/******* Footer *******/
+footer {
+    background: #F2F2F2;
+    padding: 20px;
+}
+.footer-container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+footer h4 {
+    font-size: 1.2rem;
+}
+footer li, footer h4 {
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+footer li:hover {
+    color: #0065FC; 
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
