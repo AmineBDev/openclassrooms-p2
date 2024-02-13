@@ -40,7 +40,7 @@ a {
 }
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.274);
 }
 .card img {
     object-fit: cover;
@@ -55,6 +55,7 @@ a {
     color: var(--main-bg-color)
 }
 
+
 /******** Header *********/
 header {
     display: flex;
@@ -68,7 +69,7 @@ nav ul {
     display: flex;
     gap: 70px;
 }
-nav a {
+nav li {
     padding: 15px 0;
     transition: 0.2s;  
     position: relative;
@@ -84,6 +85,7 @@ nav a:hover::before {
     background: #0065FC;
     transform: translateY(-15px);
 }
+
 
 /********* SECTION RECHERCHE **********/
 .search {
@@ -142,7 +144,6 @@ input::placeholder {
     align-items: center;
     gap: 10px;
 }
-
 .filter-search h2 {
     font-size: 1.2rem;
 }
@@ -156,6 +157,7 @@ input::placeholder {
     padding: 13px 20px;
     margin: 5px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .filter-search button:hover {
     background: #DEEBFF;
@@ -181,12 +183,12 @@ input::placeholder {
     transform: translateY(-15px);
 }
 
+
 /****** Hebergements And Populaires ***********/
 #hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
 }
-
 #hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
@@ -194,7 +196,9 @@ input::placeholder {
     box-sizing: border-box;
 }
 
+
 /****** Hebergements ***********/
+
 .hebergements {
     width: 65%;
 }
@@ -232,29 +236,28 @@ input::placeholder {
 .hebergements h4:hover {
     color: #0065FC;
 }
+
+
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
-
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
 }
-
 .populaires-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
 .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
@@ -263,16 +266,17 @@ input::placeholder {
     justify-content: space-between;
     box-sizing: border-box;
 }
-
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
-
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
 /******* Activités *******/
+
 #activities {
     width: 95%;
     margin: 60px auto;
@@ -303,7 +307,9 @@ input::placeholder {
     margin: 0 20px;
 }
 
+
 /******* Footer *******/
+
 footer {
     background: #F2F2F2;
     padding: 20px;
@@ -324,6 +330,8 @@ footer li, footer h4 {
 footer li:hover {
     color: #0065FC; 
 }
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -336,37 +344,34 @@ footer li:hover {
         align-items: start;
     }
 
+
     /******* HEBERGEMENTS POPULAIRES *******/
     #hebergements-and-populaires {
         flex-direction: column;
     }
-
     .hebergements {
         width: 100%;
     }
-
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
-
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .populaires-cards a {
         width: 30%;
     }
-
     .populaires-cards .card-title {
         font-size: 14px;
     }
-
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+
     /******* ACTIVITES *******/
     .activities-cards img {
         height: 200px;
@@ -383,6 +388,7 @@ footer li:hover {
     .main-container {
         padding: 0;
     }
+
 
     /***** HEADER *****/
 
@@ -412,6 +418,7 @@ footer li:hover {
         background: #0065FC;
         transform: translateY(30px);
     }
+
     
     /******* SECTION RECHERCHE *******/
 
@@ -438,7 +445,7 @@ footer li:hover {
     } 
 
 
- 
+    /****** Hebergements And Populaires ***********/
 
     #hebergements-and-populaires {
         flex-direction: column-reverse;
@@ -447,7 +454,9 @@ footer li:hover {
         border-radius: 0;
         background-color: white;
     }
+
     
+    /****** HEBERGEMENT ******/
 
     .hebergements-cards {
         grid-template-columns: 1fr;
@@ -459,6 +468,7 @@ footer li:hover {
     }
 
     
+    /****** POPULAIRE ******/
 
     #hebergements-and-populaires section:last-child {
         background: #F2F2F2;
@@ -473,6 +483,7 @@ footer li:hover {
         max-width: 500px;
         margin: auto;
     }
+
     
     /****** ACTIVITES ******/
 
@@ -491,6 +502,7 @@ footer li:hover {
     .activities-card-txt {
         height: 60px;
     }
+
 
     /****** FOOTER ******/
 
